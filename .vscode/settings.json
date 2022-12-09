@@ -1,0 +1,69 @@
+{
+    "java.project.sourcePaths": [
+        "src/main/java",
+        "src/test/java",
+    ],
+    //关闭自动编译
+    "java.autobuild.enabled": false,
+    //关闭debug前强制编译
+    "java.debug.settings.forceBuildBeforeLaunch": false,
+    //在项目根目录下生成.classpath等配置文件
+    "java.import.generatesMetadataFilesAtProjectRoot": true,
+    "deploy": {
+        "packages": [
+            {
+                "name": "前端",
+                "description": "webapp里面所有文件",
+                "files": [
+                    "src/main/webapp/*",
+                    "src/main/webapp/*/*",
+                    "src/main/webapp/*.*",
+                    "src/main/webapp/*/*.*",
+                    "src/main/webapp/*/*/*.*",
+                    "src/main/webapp/*/*/*/*.*",
+                    "src/main/webapp/*/*/*/*/*.*",
+                    "src/main/webapp/*/*/*/*/*",
+                    "src/main/webapp/*/*/*/*/*/*.*",
+                ],
+                "exclude": [
+                    "src/main/webapp/test/*"
+                ],
+                "deployOnSave": false,
+                "useTargetList": true,
+                "button": {
+                    "text": "热部署",
+                    "tooltip": "点击这里将前端部署到hotsite",
+                    "command": "",
+                    "targets": [
+                        "frontend"
+                    ]
+                }
+            }
+        ],
+        "targets": [
+            {
+                "type": "local",
+                "name": "froutend",
+                "description": "A local folder",
+                "dir": "target/webapp",
+                "mappings": [
+                    {
+                        "source": "src/main/webapp",
+                        "isRegEx": false,
+                        "target": "/"
+                    }
+                ]
+            },
+        ],
+        // 成功时弹出窗口
+        "showPopupOnSuccess": false,
+        // 显示部署结果状态栏
+        "showDeployResultInStatusBar": false,
+        // 显示加载插件
+        "displayLoadedPlugins": false,
+        // 显示网络信息
+        "displayNetworkInfo": false,
+    },
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "maven.view": "hierarchical"
+}

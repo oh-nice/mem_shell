@@ -1,0 +1,29 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <!--这里是给我们的servlet取个别名，一般类名就行-->
+    <servlet-name>Login</servlet-name>
+    <!--这里是全类名，也就是让系统知道你上面那个名字是取给谁的-->
+    <servlet-class>example.demo.Login</servlet-class>
+  </servlet>
+    <!--给上面的东西添加映射，可以理解为，上面创建了一个门，这里写门通向哪里-->
+  <servlet-mapping>
+    <!--和上面的大门名对应-->
+    <servlet-name>Login</servlet-name>
+    <!--大门名的接口, 后面运行后的地址加上/ser01，就可以访问到我们的servlet类了-->
+    <url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+
+</web-app>
